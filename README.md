@@ -1,4 +1,6 @@
 # AneurAI-AISaturdays-Madrid
+![alt text](https://github.com/algadoc/AneurAI-AISaturdays-Madrid/blob/master/LogoAneurisma.PNG)
+
 Somos un grupo de la segunda edición de AISaturdays Madrid y hemos desarroyado este algoritmo que propone el mejor tratamiento a seguir para pacientes con hemorragia subaracnoidea.
 
 #AneurAI_Script:
