@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Neuralgias</title>
+</head>
+<body>
+    <div style="background-color:cadetblue; color: white;">
+        <h3>PREDICCIÓN TRATAMIENTO NEURALGIAS</h3>
+    </div>
+    <div>
+        <form method="GET" action="/">
+        <table class="table table-sm">
+            <tr><h4>Resultados predicción tratamiento:</h4></tr> 
+            <tr>
+                <td width="33%">Predicción tratamiento quirúrgico:</td>
+                <td>{{resultado[0]}}</td>
+            </tr>
+            <tr>
+                <td width="33%">Predicción tratamiento endovascular:</td>
+                <td>{{resultado[1]}}</td>
+            </tr>
+            <tr>
+                <td width="33%">Tratamiento recomendado:</td>
+                <td>{{resultado[2]}}</td>
+            </tr>
+        </table>
+        <table class="table table-sm">
+            <tr><h4>Análisis KPCA de datos históricos:</h4></tr> 
+            <tr>
+                <td width="33%">Parámetro 1 KPCA:</td>
+                <td>{{resultado[3]}}</td>
+            </tr>
+            <tr>
+                <td width="33%">Parámetro 2 KPCA:</td>
+                <td>{{resultado[4]}}</td>
+            </tr>
+            <tr>
+                <td width="33%">Número de Cluster:</td>
+                <td>{{resultado[5]}}</td>
+            </tr>                 
+        </table>
+        <img src="{{url_for('static', filename='pca1.png')}}" width="33%">
+        <table class="table table-sm">
+            <tr><h4>Análisis KPCA de Edad, Sexo, GCS, Tamaño y Fisher:</h4></tr> 
+            <tr>
+                <td width="33%">Parámetro 1 KPCA:</td>
+                <td>{{resultado[6]}}</td>
+            </tr>
+            <tr>
+                <td width="33%">Parámetro 2 KPCA:</td>
+                <td>{{resultado[7]}}</td>
+            </tr>
+            <tr>
+                <td width="33%">Parámetro 3 KPCA:</td>
+                <td>{{resultado[8]}}</td>
+            </tr>            
+            <tr>
+                <td width="33%">Número de Cluster:</td>
+                <td>{{resultado[9]}}</td>
+            </tr>                  
+        </table>
+        <img src="{{url_for('static', filename='pca2.gif')}}" width="37%">
+        <div>
+            <button class="btn btn-primary" type="submit">Regresar</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

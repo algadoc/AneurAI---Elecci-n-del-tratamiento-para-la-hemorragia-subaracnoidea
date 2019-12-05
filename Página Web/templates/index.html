@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Neuralgias</title>
+</head>
+<body>
+    <div style="background-color:cadetblue; color: white;">
+        <h3>PREDICCIÓN TRATAMIENTO NEURALGIAS</h3>
+    </div>
+    <div>
+    <form method="GET" action="/predict">
+        <tr><h5>Datos paciente y pruebas:</h5></tr> 
+        <table class="table table-sm">    
+                <tr>    
+                    <td width="33%">Edad:</td>
+                    <td>
+                        <input type="number" name="edad" min="0" max="120" size="2" required="required">
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Sexo:</td>
+                    <td>
+                        <select name="sexo">
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Múltiple:</td>
+                    <td>
+                        <select name="multiple">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr>    
+                    <td>GCS:</td>
+                    <td>
+                        <select name="gcs">
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>WFNS Ingreso:</td>
+                    <td>
+                        <select name="wfns_i">
+                            <option value="1">1: GCS igual a 15</option>
+                            <option value="2">2: GCS entre 13-14 sin focalidad neurologica</option>
+                            <option value="3">3: GCS entre 13-14 con focalidad neurologica</option>
+                            <option value="4">4: GCS entre 7-12</option>
+                            <option value="5">5: GCS menor de 7</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>WFNS Pretaratamiento:</td>
+                    <td>
+                        <select name="wfns_p">
+                            <option value="1">1: GCS igual a 15</option>
+                            <option value="2">2: GCS entre 13-14 sin focalidad neurologica</option>
+                            <option value="3">3: GCS entre 13-14 con focalidad neurologica</option>
+                            <option value="4">4: GCS entre 7-12</option>
+                            <option value="5">5: GCS menor de 7</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Fisher:</td>
+                    <td>
+                        <select name="fisher">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Tamaño:</td>
+                    <td>
+                        <input type="number" name="tamano" min="0" max="200" size="2" required="required">
+                    </td>
+                </tr>
+                <tr>    
+                    <td>UCI:</td>
+                    <td>
+                        <select name="uci">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select> 
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Oct 12:</td>
+                    <td>
+                        <select name="oct12">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Momento:</td>
+                    <td>
+                        <select name="momento">
+                            <option value="1">1: Agudo (menos de 24 horas)</option>
+                            <option value="2">2: Precoz (3 dias - 24 horas)</option>
+                            <option value="3">3: Tardio (mas de 3 dias)</option>
+                        </select>
+                    </td>
+                </tr>              
+                <tr>    
+                    <td>Localización:</td>
+                    <td>
+                        <select name="localizacion">
+                            <option value="ACoA: Arteria comunicante anterior">ACoA: Arteria comunicante anterior</option>
+                            <option value="ACM: Arteria cerebral media">ACM: Arteria cerebral media</option>
+                            <option value="A.Co.P: Arteria comunicante posterior">A.Co.P: Arteria comunicante posterior</option>
+                            <option value="ACI: Arteria carotida interna">ACI: Arteria carotida interna</option>
+                            <option value="BAS: Apex de la basilar">BAS: Apex de la basilar</option>
+                            <option value="PICA">PICA</option>
+                            <option value="VBA: Vertebrobasilar: AICA, SCA">VBA: Vertebrobasilar: AICA, SCA</option>
+                            <option value="ACA: Arteria cerebral anterior">ACA: Arteria cerebral anterior</option>
+                            <option value="BIF: Bifurcacion carotidea">BIF: Bifurcacion carotidea</option>
+                            <option value="PERI: Pericallosa">PERI: Pericallosa</option>
+                            <option value="OFT: Arteria oftalmica">OFT: Arteria oftalmica</option>
+                            <option value="A.Ch.A: Arteria coroidea anterior">A.Ch.A: Arteria coroidea anterior</option>
+                            <option value="ACP: Arteria cerebral posterior">ACP: Arteria cerebral posterior</option>
+                        </select>
+                    </td>
+                </tr>                                                                                           
+        </table>
+        <table class="table table-sm">
+                <tr><h5>Datos históricos paciente:</h5></tr>      
+                <tr>    
+                    <td width="33%">HTA:</td>
+                    <td>
+                        <select name="hta">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Tabaco:</td>
+                    <td>
+                        <select name="tabaq">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Obesidad:</td>
+                    <td>
+                        <select name="obesidad">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Diabetes:</td>
+                    <td>
+                        <select name="diabetes">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td>Alcohol:</td>
+                    <td>
+                        <select name="alcohol">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr>                
+                <tr>    
+                    <td>Drogas:</td>
+                    <td>
+                        <select name="drogas">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr> 
+                <tr>    
+                    <td>Familiares:</td>
+                    <td>
+                        <select name="familiares">
+                            <option value="0">No</option>
+                            <option value="1">Si</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>    
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary" type="submit">Predicción</button>
+                    </td>
+                </tr> 
+        </table> 
+    </form>  
+    </div>
+</body>
+</html>
