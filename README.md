@@ -12,21 +12,23 @@ La HSA (hemorragia subaracnoidea) es un volcado de sangre entre la aracnoide y l
 
 Hemos utilizado datos recogidos por la Asociación Española de Neurocirugía entre los años 2004 y 2015. Se grabaron numerosas variables médicas de 4000 pacientes, pero al final las variables incluidas en el modelo son:
 
--Edad
--Sexo
--Múltiple (si el paciente tiene mas de un aneurisma)
--Glasgow Comma Scale (https://www.glasgowcomascale.org/)
--World Federation of Neurological Surgeons Subarachnoid Hemorrhage Grading (https://emedicine.medscape.com/article/2172497-overview)
--Fisher Scale (https://emedicine.medscape.com/article/2172467-overview)
--Tamaño del aneurisma
--Momento (en que punto del desarroyo de la hemorragia se trató)
+- Edad
+- Sexo
+- Múltiple (si el paciente tiene mas de un aneurisma)
+- Glasgow Comma Scale (https://www.glasgowcomascale.org/)
+- World Federation of Neurological Surgeons Subarachnoid Hemorrhage Grading (https://emedicine.medscape.com/article/2172497-overview)
+- Fisher Scale (https://emedicine.medscape.com/article/2172467-overview)
+- Tamaño del aneurisma
+- Momento (en que punto del desarroyo de la hemorragia se trató)
 
 ## Modelos
 
 Buscamos qué modelo nos daría la mejor capacidad de predicción. Entre los que probamos cabe destacar:
--Random Forest Classifier
--Decision Tree Classifier
--SVM
+
+- Random Forest Classifier
+- Decision Tree Classifier
+- SVM
+
 Al final encontramo que un AdaBoost Classifier con 200 Decision Trees y un Learning Rate de nos daba la mayor precisión.
 
 ## AneurAI_Script
