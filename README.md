@@ -6,6 +6,7 @@ Somos un grupo de la segunda edición de AISaturdays Madrid y hemos desarrollado
 ## Qué es la HSA
 
 La HSA (hemorragia subaracnoidea) es un volcado de sangre entre la aracnoide y la piamadre, dos de las capas que recubren y protegen el cerebro. Este derramamiento puede producir daño cerebral en cuestión de minutos, y afecta a 1 de cada 1000 personas. Muchos de estos casos ocurren cuando se ruptura un aneurisma, una deformación de la pared arterial dentro del cerebro. Tras numerosos ciclos de presión de la sangre, pequeñas deformaciones en la pared de las arterias empiezan a crecer y forman pompas o globos que debilitan la pared. Al romperse, el torrente sanguineo se expone al ecosistema intracraneal, lo cual resulta en una HSA. La primera imagen es una reconstrucción de un aneurisma, y la segunda es el resultado de la ruptura de uno.
+
  ![alt text](https://github.com/algadoc/AneurAI-AISaturdays-Madrid/blob/master/Aneurisma.gif) ![alt text](https://github.com/algadoc/AneurAI-AISaturdays-Madrid/blob/master/HSA.png)
 
 ## Dataset
